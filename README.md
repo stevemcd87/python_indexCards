@@ -7,7 +7,7 @@ An app to help memorize commands and methods
 - App shows a list of index cards belonging to users past request.
 - User is allowed to click on card which will show opposite side of card.
 
-##Future
+## Future
 
 - Working on a review and test template
 - Review will allow the user to see all cards for that language and review them freely.
