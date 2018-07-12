@@ -1,0 +1,27 @@
+body {
+  background-color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+div.cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+div.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 150px;
+  background-color: grey;
+  margin: .5rem;
+}
+
+div.card > p{
+ padding: .2rem;
+}

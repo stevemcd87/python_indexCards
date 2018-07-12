@@ -1,0 +1,27 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+    </script>
+    <script src="{% static 'app.js' %}"></script>
+    <title>Quick Learn</title>
+  </head>
+  <body>
+    <h1>Quick Learn</h1>
+    <h2>A quick way to learn commands and&#47;or methods for various languages</h2>
+    <div class="block-content">
+      {% block content %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>

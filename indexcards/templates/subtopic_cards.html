@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content%}
+  <h3>
+    <a href="{% url 'subjects' %}">
+      subjects
+    </a>
+    <a href="{% url 'subject_subtopics' subject.name%} ">
+      &#47;{{subject.name}}
+    </a>
+    <span>&#47;{{subtopic.name}}</span>
+  </h3>
+
+<div class="cards">
+  {% for card in cards%}
+    <div class="card">
+      <!-- <a href="{#% url 'card' subject.name subtopic.name card.front%}"> -->
+        <p>{{card.front|capfirst}}</p>
+        <p class="hidden">{{card.back|capfirst}}</p>
+      <!-- </a> -->
+    </div>
+  {% endfor %}
+</div>
+
+
+{% endblock %}
