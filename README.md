@@ -13,4 +13,5 @@ An app to help memorize commands and methods
 - Review will allow the user to see all cards for that language and review them freely.
 - Test will display each cards back(description) side one at a time and allow
   the user to input what they think the command/ method is. 
-- Test will allow the user to skip card or just reveal answer if they get stuck  
+- Test will allow the user to skip card or just reveal answer if they get stuck 
+- I also want to scrape W3Schools to fill update my database instead of hard coding the data with admin
