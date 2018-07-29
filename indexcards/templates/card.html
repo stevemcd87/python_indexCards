@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {% block content%}
 
-<p class= "card">{{card.front}}</p>
-<p class= "card hidden">{{card.front}}</p>
 
+<div class="card">
+  <div class="front">
+    {{card.front}}
+  </div>
+  <div class="back">
+    {{card.back}}
+  </div>
+</div>
 {% endblock %}

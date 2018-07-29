@@ -1,11 +1,13 @@
 $('document').ready(function(){
-  $('.card').click(function(e){
-    for (var i = 0; i < e.currentTarget.children.length; i++) {
-      if (e.currentTarget.children[i].className) {
-        e.currentTarget.children[i].className = "";
-      } else {
-        e.currentTarget.children[i].className = "hidden";
-      }
-    }
-  })
+
+  $(".card-grid").flip({
+      trigger: 'manual'
+  });
+  $(".card-grid").click(function () {
+      $(this).closest(".card-grid").flip('toggle');
+  });
+  // $(".card-grid").click(function () {
+  //     $(this).closest(".card-grid").flip(false);
+  // });
+  console.log('change');
 });
