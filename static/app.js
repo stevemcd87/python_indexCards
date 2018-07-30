@@ -7,4 +7,20 @@ $('document').ready(function(){
       $(this).closest(".card-grid").flip('toggle');
   });
   // -----------------------------------
+
+  $(".user-input").change(function(e){
+
+    const answer = e.currentTarget.parentElement.classList["0"].replace('-', ' ');
+    const userInput = e.currentTarget.value.trim();
+    if (answer === userInput) {
+      $(e.currentTarget.parentNode.parentNode).addClass('correct');
+      $(e.currentTarget.parentNode.parentNode).removeClass('wrong');
+      $(e.currentTarget).prop("readonly", true);
+    } else {
+      $(e.currentTarget.parentNode.parentNode).addClass('wrong');
+    }
+    console.log(answer);
+    console.log(userInput);
+    console.log(e);
+  })
 });

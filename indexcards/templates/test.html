@@ -7,12 +7,11 @@
   <div class="cards">
 
     {% for card in cards%}
-      <div class="card-grid">
-        <div class="front">
-          {{card.front}}
-        </div>
-        <div class="back">
+      <div class="card-test">
+        <div class= {{card.front}}>
           {{card.back}}
+
+          <input class="user-input" type="text">
         </div>
       </div>
     {% endfor %}

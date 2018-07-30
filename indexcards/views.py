@@ -52,4 +52,4 @@ def review(request, name):
     cards = []
     for subTopic in subtopics:
         cards += Card.objects.all().filter(subTopic__name = subTopic)
-    return render(request, 'test.html', {'subject': subject, 'subtopics': subtopics, 'cards': cards})
+    return render(request, 'review.html', {'subject': subject, 'subtopics': subtopics, 'cards': cards})
