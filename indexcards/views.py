@@ -22,7 +22,6 @@ def subject_subtopics(request, name):
 def subtopic_cards(request, name, subname):
     try:
         subject = Subject.objects.get(name=name)
-        # subtopic = SubTopic.objects.all().filter(name = subname )
         subtopic = SubTopic.objects.get(name= subname)
         cards = Card.objects.all().filter(subTopic__name = subname)
     except Subject.DoesNotExist:
@@ -43,11 +42,14 @@ def test(request, name):
     subject = Subject.objects.get(name=name)
     subtopics = SubTopic.objects.all().filter(subject__name = name )
     cards = []
-    for subtopic in subtopics:
-        cards.append(subtopic)
-        print(subtopic.name)
-    return render(request, 'test.html', {'subject': subject})
+    for subTopic in subtopics:
+        cards += Card.objects.all().filter(subTopic__name = subTopic)
+    return render(request, 'test.html', {'subject': subject, 'subtopics': subtopics, 'cards': cards})
 
 def review(request, name):
     subject = Subject.objects.get(name=name)
-    return render(request, 'review.html', {'subject': subject})
+    subtopics = SubTopic.objects.all().filter(subject__name = name )
+    cards = []
+    for subTopic in subtopics:
+        cards += Card.objects.all().filter(subTopic__name = subTopic)
+    return render(request, 'test.html', {'subject': subject, 'subtopics': subtopics, 'cards': cards})

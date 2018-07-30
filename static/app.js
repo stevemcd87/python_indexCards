@@ -1,13 +1,10 @@
 $('document').ready(function(){
-
+  // To Create FLIP action
   $(".card-grid").flip({
       trigger: 'manual'
   });
-  $(".card-grid").click(function () {
+  $(".card-grid").hover(function () {
       $(this).closest(".card-grid").flip('toggle');
   });
-  // $(".card-grid").click(function () {
-  //     $(this).closest(".card-grid").flip(false);
-  // });
-  console.log('change');
+  // -----------------------------------
 });
