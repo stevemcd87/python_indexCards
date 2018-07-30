@@ -15,3 +15,11 @@ An app to help memorize commands and methods
   the user to input what they think the command/ method is. 
 - Test will allow the user to skip card or just reveal answer if they get stuck 
 - I also want to scrape W3Schools to fill update my database instead of hard coding the data with admin
+
+ ## To Run
+ 
+ - Install Python3.x and Django
+ - In your command line 
+   - git clone https://github.com/stevemcd87/python_indexCards.git
+   - cd python_indexCards
+   - python3 manage.py runserver
