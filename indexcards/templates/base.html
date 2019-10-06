@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-<script src="https://code.jquery.com/jquery-2.1.4.min.js">
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -17,8 +17,10 @@
     <title>Quick Learn</title>
   </head>
   <body>
-    <h1>Quick Learn</h1>
-    <h2>A quick way to learn commands and&#47;or methods for various languages</h2>
+    <header  class="clearfix">
+      <h1>Quick Learn</h1>
+      <h2 >An easy way to learn various subjects with the use of index cards...</h2>
+    </header>
     <div class="block-content">
       {% block content %}
       {% endblock %}

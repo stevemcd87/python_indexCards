@@ -3,7 +3,7 @@ $('document').ready(function(){
   $(".card-grid").flip({
       trigger: 'manual'
   });
-  $(".card-grid").hover(function () {
+  $(".card-grid").click(function () {
       $(this).closest(".card-grid").flip('toggle');
   });
   // -----------------------------------
@@ -19,8 +19,5 @@ $('document').ready(function(){
     } else {
       $(e.currentTarget.parentNode.parentNode).addClass('wrong');
     }
-    console.log(answer);
-    console.log(userInput);
-    console.log(e);
   })
 });
