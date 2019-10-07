@@ -1,14 +1,14 @@
-$('document').ready(function(){
+$('document').ready(function() {
   // To Create FLIP action
   $(".card-grid").flip({
-      trigger: 'manual'
+    trigger: 'manual'
   });
-  $(".card-grid").click(function () {
-      $(this).closest(".card-grid").flip('toggle');
+  $(".card-grid").click(function() {
+    $(this).closest(".card-grid").flip('toggle');
   });
   // -----------------------------------
 
-  $(".user-input").change(function(e){
+  $(".user-input").change(function(e) {
 
     const answer = e.currentTarget.parentElement.classList["0"].replace('-', ' ');
     const userInput = e.currentTarget.value.trim();

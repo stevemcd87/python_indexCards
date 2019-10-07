@@ -1,30 +1,24 @@
 {% extends "base.html" %}
 {% block content%}
 <div class="partial">
-  <p>
+  <p class="back-link">
     <a href="{% url 'subjects' %}">
       Back
     </a>
   </p>
   <h1>{{subject.name|title}}</h1>
-  <div>
-
-
-    <a href="{% url 'test' subject.name %}">test</a>
-    <a  href="{% url 'review' subject.name %}">review</a>
+  <div id="test-review">
+    <a href="{% url 'review' subject.name %}">Review</a>
+    <a href="{% url 'test' subject.name %}">Test</a>
   </div>
-
-
   <div class="subject_subtopics">
     {% for s in subtopics%}
-    <div class="subject_subtopic">
-
-      <p>
-        <a href="{% url 'subtopic_cards' subject.name s.name%}">
+    <div class="subject">
+      <a href="{% url 'subtopic_cards' subject.name s.name%}">
+        <p>
           {{s.name|capfirst}}
-        </a>
-      </p>
-
+        </p>
+      </a>
     </div>
     {% endfor %}
   </div>

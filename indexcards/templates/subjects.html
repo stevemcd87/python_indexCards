@@ -3,14 +3,13 @@
 <div id="subjects-page" class="partial">
   <h3>Choose a subject you'd like to study</h3>
   <div id="subjects">
-
     {% for subject in subjects%}
     <div class="subject">
-      <p>
-        <a href="{% url 'subject_subtopics' subject.name%}">
+      <a href="{% url 'subject_subtopics' subject.name%}">
+        <p>
           {{subject.name|capfirst}}
-        </a>
-      </p>
+        </p>
+      </a>
     </div>
     {% endfor %}
   </div>
