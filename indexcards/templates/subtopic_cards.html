@@ -1,27 +1,27 @@
 {% extends "base.html" %}
 {% block content%}
-<!-- <div class="partial"> -->
-<h3>
-  <a href="{% url 'subjects' %}">
-    subjects
-  </a>
-  <a href="{% url 'subject_subtopics' subject.name%} ">
-    &#47;{{subject.name}}
-  </a>
-  <span>&#47;{{subtopic.name}}</span>
-</h3>
+<div class="partial">
+  <p class="back-link">
+    <a href="{% url 'subject_subtopics' subject.name%} ">
+      Back
+    </a>
+  </p>
+  <h3 class="test-review">
+    <span>{{subject.name| title}}</span>
+    <span>{{subtopic.name| title}}</span>
+  </h3>
 
-<div class="cards">
-  {% for card in cards%}
-  <div class="card-grid">
-    <div class="front">
-      {{card.front}}
+  <div class="cards">
+    {% for card in cards%}
+    <div class="card-grid">
+      <div class="front">
+        <p class="card-content">{{card.front}}</p>
+      </div>
+      <div class="back">
+        <p class="card-content">{{card.back}}</p>
+      </div>
     </div>
-    <div class="back">
-      {{card.back}}
-    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
-<!-- </div> -->
 {% endblock %}
