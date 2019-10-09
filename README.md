@@ -1,7 +1,7 @@
 # Quick Learn
 An app to help memorize commands and methods
 
-![Quick Learn App](static/gif/QuickLearn.gif | width=300)
+![Quick Learn App](static/gif/QuickLearn.gif 
 
 
 - Utilizes RESTful api
