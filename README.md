@@ -1,4 +1,4 @@
-# python_indexCards
+# Quick Learn
 An app to help memorize commands and methods
 
 ![Quick Learn App](static/gif/QuickLearn.gif)
@@ -12,9 +12,6 @@ An app to help memorize commands and methods
   - Review allows the user to see all cards for that language and review them freely.
   - Test displays each cards back(description) side one at a time and allow
     the user to input what they think the command/ method is. 
-## Future
-
-- Scrape W3Schools to fill update my database instead of hard coding the data with admin
 
  ## To Run
  
