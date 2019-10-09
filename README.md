@@ -1,6 +1,8 @@
 # python_indexCards
 An app to help memorize commands and methods
 
+![Quick Learn App](static/gif/QuickLearn.gif)
+
 
 - Utilizes RESTful api
 - User chooses a language and subTopic
