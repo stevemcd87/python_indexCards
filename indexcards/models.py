@@ -21,6 +21,7 @@ class IndexCard(models.Model):
     def __str__(self):
         return (self.name)
 
+
 class Card(models.Model):
     front = models.CharField(max_length=50)
     back = models.CharField(max_length=100)
@@ -28,3 +29,6 @@ class Card(models.Model):
 
     def __str__(self):
         return (self.front)
+
+    def removeDash(self):
+        return self.front.replace('-', ' ')

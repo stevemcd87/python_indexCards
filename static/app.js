@@ -4,20 +4,25 @@ $('document').ready(function() {
     trigger: 'manual'
   });
   $(".card-grid").click(function() {
+    if ($(this).hasClass('test')) return false
     $(this).closest(".card-grid").flip('toggle');
   });
   // -----------------------------------
 
-  $(".user-input").change(function(e) {
-
-    const answer = e.currentTarget.parentElement.classList["0"].replace('-', ' ');
-    const userInput = e.currentTarget.value.trim();
+  $(".user-input").change(function() {
+    let userInput = $(this)["0"].value,
+      answer = $(this).siblings(".answer")[0].innerText.trim();
     if (answer === userInput) {
-      $(e.currentTarget.parentNode.parentNode).addClass('correct');
-      $(e.currentTarget.parentNode.parentNode).removeClass('wrong');
-      $(e.currentTarget).prop("readonly", true);
+      $(this).closest(".card-grid")
+        .addClass('correct')
+        .removeClass('incorrect')
+        .find('.incorrect-image').hide();
+      $(this).closest(".card-grid").find('.correct-image').show();
+      $(this).prop("readonly", true);
     } else {
-      $(e.currentTarget.parentNode.parentNode).addClass('wrong');
+      $(this).closest(".card-grid")
+        .addClass('incorrect')
+        .find('.incorrect-image').show();
     }
   })
 });

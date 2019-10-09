@@ -16,6 +16,10 @@ body {
   display: table;
 }
 
+.hidden {
+  display: none;
+}
+
 header {
   color: white;
   padding: .5em .5em 0 0;
@@ -57,7 +61,7 @@ h2 {
 .partial h3 {
   margin: 0 0 1.3em 0;
   padding-bottom: .5em;
-  border-bottom: 2px solid #192424;
+  border-bottom: 2px solid #c1484a;
 }
 
 .back-link {
@@ -86,7 +90,7 @@ h2 {
   border-radius: 25px;
 }
 
-h3.test-review {
+.partial h3.test-review {
   margin-top: 1em;
 }
 
@@ -105,74 +109,84 @@ h3.test-review {
 }
 
 /* ++++++++++++++++ Index Cards +++++++++++++++++++++  */
-.correct {
-  border: solid green 2px;
-}
-
-.wrong {
-  border: solid red 2px;
-}
-
 .cards {
+  margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card-grid {
   flex-wrap: wrap;
-  width: 80vw;
+  width: 90vw;
   max-width: 300px;
-  height: 200px;
+  height: 250px;
   margin: 0 auto;
   margin-bottom: 1.5em;
 }
 
-/*
-.card-test {
-  position: relative;
-  background-color: #EDEDED;
-  flex-wrap: wrap;
-  width: 40%;
-  max-width: 200px;
-  height: 200px;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 10%;
-}
-
-.card-test input {
-  position: absolute;
-  bottom: 1rem;
-  left: 5%;
-  border: none;
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  width: 90%;
-  /* margin: 0 auto; */
-/* background: grey; */
-/* border-bottom: 1px solid black; */
-/* border-bottom:; */
-/* } */
 .back, .front {
   font-family: 'Gloria Hallelujah', cursive;
   background-image: url("images/index-card.jpg");
+  background-size: cover;
   box-sizing: border-box;
-  width: 80vw;
+  width: 90vw;
   max-width: 300px;
-  height: 200px;
+  height: 250px;
   line-height: 1em;
   font-size: 1em;
 }
 
 .front .card-content {
-  padding: 3em;
+  padding: 3.6em 0;
+}
+
+.test .front .card-content {
+  padding: 0;
+  margin-top: 1.8em;
+}
+
+.answer {
+  display: none;
+}
+
+.correct {
+  border: solid green 2px;
+  position: absolute;
+}
+
+.incorrect {
+  border: solid red 2px;
+}
+
+.card-grid.test.correct .front .card-content,
+.card-grid.test.incorrect .front .card-content {
+  margin-top: .4em;
+}
+
+.test .front .card-content input {
+  display: block;
+  margin: 0 auto;
+  background-color: inherit;
+  border: 0;
+  text-align: center;
+  line-height: 1em;
+  font-family: inherit;
+  margin-top: 1.2em;
+  font-size: 1em;
+}
+
+.test .front .card-content input:focus {
+  outline: none;
+}
+
+.test .front img {
+  width: 50px;
+  height: 50px;
 }
 
 .back .card-content {
-  padding: 2em;
+  padding: 1.8em .5em;
 }
 
 @media screen and (min-width: 500px) {
@@ -193,7 +207,7 @@ h3.test-review {
   }
 
   .partial {
-    max-width: 610px;
+    max-width: 660px;
     margin: 0 auto;
     margin-top: 1em;
   }

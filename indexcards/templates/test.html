@@ -1,19 +1,32 @@
 {% extends "base.html" %}
+
 {% block content%}
+{% load static %}
+<div class="partial">
+  <p class="back-link">
+    <a href="{% url 'subject_subtopics' subject.name %}">Back</a>
+  </p>
 
-
-  <a href="{% url 'subject_subtopics' subject.name %}">back</a>
-
+  <h3 class="test-review">Test</h3>
   <div class="cards">
 
     {% for card in cards%}
-      <div class="card-test">
-        <div class= {{card.front}}>
-          {{card.back}}
+    <div class="card-grid test">
+      <div class="front">
+        <img class="correct-image hidden" src="{% static 'images/check.png'%}" alt="correct image" />
+        <img class="incorrect-image hidden" src="{% static 'images/x.png'%}" alt="incorrect image" />
+        <p class="card-content">
 
-          <input class="user-input" type="text">
-        </div>
+          <span>{{card.back}}</span>
+          <span class="answer">{{card.removeDash}}</span>
+          <input class="user-input" type="text" placeholder="Answer Here">
+        </p>
+
       </div>
+    </div>
     {% endfor %}
   </div>
+</div>
+
+
 {% endblock %}
